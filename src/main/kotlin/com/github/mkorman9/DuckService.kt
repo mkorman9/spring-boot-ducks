@@ -10,11 +10,11 @@ import org.ktorm.dsl.insert
 import org.ktorm.dsl.map
 import org.ktorm.dsl.select
 import org.ktorm.dsl.where
-import org.springframework.stereotype.Service
+import org.springframework.stereotype.Component
 import java.time.Instant
 import java.util.UUID
 
-@Service
+@Component
 class DuckService(
     private val db: Database
 ) {

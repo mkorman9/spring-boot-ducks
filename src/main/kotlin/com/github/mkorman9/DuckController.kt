@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
 import java.util.UUID
 
-private val log = LoggerFactory.getLogger(DuckController::class.java)
-
 @RestController
 @RequestMapping("/api/ducks")
 class DuckController(
     private val duckService: DuckService
 ) {
+    private val log = LoggerFactory.getLogger(DuckController::class.java)
+
     @GetMapping
     fun findAllDucks(): List<Duck> {
         return duckService.findAllDucks()
